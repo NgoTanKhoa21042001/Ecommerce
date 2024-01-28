@@ -18,7 +18,7 @@ const Darkmode = () => {
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         src={DarkButton}
         alt=""
-        className={`w-12 cursor-pointer`}
+        className={`w-12`}
       />
     </div>
   );
