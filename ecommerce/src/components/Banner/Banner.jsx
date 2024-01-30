@@ -34,7 +34,7 @@ const Banner = ({ data }) => {
             <div>
               <button
                 style={{ color: data.bgColor }}
-                className="bg-white py-2 px-4 rounded"
+                className="bg-white py-2 px-4 rounded-full"
               >
                 Shop Now
               </button>

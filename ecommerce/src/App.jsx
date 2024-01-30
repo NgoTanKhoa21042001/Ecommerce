@@ -10,6 +10,7 @@ import headphone from "./assets/hero/headphone.png";
 import smartwatch2 from "./assets/category/smartwatch2-removebg-preview.png";
 
 import Banner from "./components/Banner/Banner";
+import Products from "./components/Product/Products";
 const BannerData = {
   discount: "30% OFF",
   title: "Fine Smile",
@@ -41,6 +42,8 @@ function App() {
       <Category2 />
       <Services />
       <Banner data={BannerData} />
+      <Products />
+      <Banner data={BannerData2} />
     </div>
   );
 }
