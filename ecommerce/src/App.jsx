@@ -11,6 +11,7 @@ import smartwatch2 from "./assets/category/smartwatch2-removebg-preview.png";
 
 import Banner from "./components/Banner/Banner";
 import Products from "./components/Product/Products";
+import Blogs from "./components/Blogs/Blogs";
 const BannerData = {
   discount: "30% OFF",
   title: "Fine Smile",
@@ -44,6 +45,7 @@ function App() {
       <Banner data={BannerData} />
       <Products />
       <Banner data={BannerData2} />
+      <Blogs />
     </div>
   );
 }
