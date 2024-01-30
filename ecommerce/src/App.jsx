@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import "./App.css";
@@ -12,6 +13,9 @@ import smartwatch2 from "./assets/category/smartwatch2-removebg-preview.png";
 import Banner from "./components/Banner/Banner";
 import Products from "./components/Product/Products";
 import Blogs from "./components/Blogs/Blogs";
+import Partners from "./components/Partners/Partners";
+import Footer from "./components/Footer/Footer";
+import Popup from "./components/Popup/Popup";
 const BannerData = {
   discount: "30% OFF",
   title: "Fine Smile",
@@ -35,10 +39,15 @@ const BannerData2 = {
   bgColor: "#2dcc6f",
 };
 function App() {
+  const [orderPopup, setOrderPopup] = useState(false);
+
+  const handleOrderPopup = () => {
+    setOrderPopup(!orderPopup);
+  };
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden">
-      <Navbar />
-      <Hero />
+      <Navbar handleOrderPopup={handleOrderPopup} />
+      <Hero handleOrderPopup={handleOrderPopup} />
       <Category />
       <Category2 />
       <Services />
@@ -46,6 +55,9 @@ function App() {
       <Products />
       <Banner data={BannerData2} />
       <Blogs />
+      <Partners />
+      <Footer />
+      <Popup orderPopup={orderPopup} handleOrderPopup={handleOrderPopup} />
     </div>
   );
 }

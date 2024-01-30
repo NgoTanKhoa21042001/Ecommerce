@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import Image1 from "../../assets/hero/headphone.png";
 import Image2 from "../../assets/category/vr.png";
 import Image3 from "../../assets/category/macbook.png";
+import Button from "../Shared/Button";
 
 const HeroData = [
   {
@@ -30,7 +31,7 @@ const HeroData = [
   },
 ];
 
-const Hero = () => {
+const Hero = ({ handleOrderPopup }) => {
   const settings = {
     dots: false,
     arrows: false,
@@ -87,11 +88,12 @@ const Hero = () => {
                       data-aos-duration="500"
                       data-aos-delay="300"
                     >
-                      {/* <Button
+                      <Button
                         text="Shop By Category"
                         bgColor="bg-primary"
                         textColor="text-white"
-                      /> */}
+                        handleOrderPopup={handleOrderPopup}
+                      />
                     </div>
                   </div>
                   {/* Img section */}
